@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "631279178693",
+    "project_id": "kinbechfurniture-ed580",
+    "storage_bucket": "kinbechfurniture-ed580.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:631279178693:android:6f8bc7461a7683f23431ac",
+        "android_client_info": {
+          "package_name": "com.kinbech.kinbech_furnitureapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYXnNVb-C2K_XgBMxJCSOS_AGJ8moi5lM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
