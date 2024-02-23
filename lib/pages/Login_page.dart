@@ -150,7 +150,7 @@ class loginpagestate extends State<loginpage> {
               children: [
                 Image.asset('assets/images/login_img.png'),
                 Container(
-                  height: size.height/1.5,
+                  height: size.height/0.8,
                   decoration: BoxDecoration(
                     color: Color(0xfff2f2f2),
                     borderRadius: BorderRadius.circular(28),
@@ -167,7 +167,7 @@ class loginpagestate extends State<loginpage> {
                               Text(
                                 'Welcome Back!',
                                 style: TextStyle(
-                                    fontSize: 25,
+                                    fontSize: 20,
                                     fontWeight: FontWeight.bold,
                                     color: Colors.black,
                                     fontFamily: "Inika"),
@@ -183,7 +183,7 @@ class loginpagestate extends State<loginpage> {
                               Text(
                                 'Please sign in to continue',
                                 style: TextStyle(
-                                    fontSize: 17,
+                                    fontSize: 15,
                                     fontWeight: FontWeight.normal,
                                     color: Colors.black,
                                     fontFamily: "Inika"),
