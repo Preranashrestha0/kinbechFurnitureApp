@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:kinbech_furnitureapp/Validation/Validator.dart';
 import 'package:kinbech_furnitureapp/components/TextFormField.dart';
+import 'package:kinbech_furnitureapp/pages/Forgot_password_page.dart';
 import 'package:kinbech_furnitureapp/pages/onBoardingpage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -261,14 +262,14 @@ class loginpagestate extends State<loginpage> {
                             children: [
                               GestureDetector(
                                 onTap: () {
-                                  // Navigator.push(
-                                  //   context,
-                                  //   MaterialPageRoute(
-                                  //     builder: (context) {
-                                  //       return ForgetPasswordPage();
-                                  //     },
-                                  //   ),
-                                  // );
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) {
+                                        return ForgetPasswordPage();
+                                      },
+                                    ),
+                                  );
                                 },
                                 child: Text('FORGET PASSWORD?',
                                   style: TextStyle(fontFamily: 'Inika',color: Colors.grey[500]), ),
