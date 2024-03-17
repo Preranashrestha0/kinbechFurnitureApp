@@ -1,7 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:furnitureapp/pages/productDetail.dart';
+
+import 'ProductDetails.dart';
 
 class searchpage extends StatefulWidget {
   const searchpage({super.key});
@@ -83,7 +84,7 @@ class _searchpageState extends State<searchpage> {
           itemBuilder: (context, index){
             return GestureDetector(
               onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>ProductDetails(resultsList[index])));
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>ProductDetails()));
               },
               child: Card(
                 elevation: 3,

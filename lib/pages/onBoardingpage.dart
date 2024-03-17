@@ -4,10 +4,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:kinbech_furnitureapp/pages/PostPage.dart';
 import 'package:kinbech_furnitureapp/pages/Profile_page.dart';
-import 'package:kinbech_furnitureapp/pages/SearchPage.dart';
 import 'package:kinbech_furnitureapp/pages/WishListPage.dart';
 import 'package:kinbech_furnitureapp/pages/home_Page.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
+
+import 'Search.dart';
 
 class OnBoardingPage extends StatefulWidget{
 
@@ -25,7 +26,7 @@ class OnBoardingPagestate extends State<OnBoardingPage>{
   static const
   List<Widget> _pages = <Widget>[
     homepage(),
-    SearchPage(),
+    searchpage(),
     PostPage(),
     WishlistPage(),
     Profile_page(),
