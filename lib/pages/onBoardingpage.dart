@@ -24,7 +24,7 @@ class OnBoardingPagestate extends State<OnBoardingPage>{
   //bottom navigation pages
   static const
   List<Widget> _pages = <Widget>[
-    HomePage(),
+    homepage(),
     SearchPage(),
     PostPage(),
     WishlistPage(),
