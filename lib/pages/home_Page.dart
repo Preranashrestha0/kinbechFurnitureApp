@@ -4,12 +4,11 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:kinbech_furnitureapp/pages/SearchPage.dart';
 
 import 'Cart_Page.dart';
 import 'Notifications.dart';
 import 'ProductDetails.dart';
+import 'Search.dart';
 
 class homepage extends StatefulWidget {
   const homepage({super.key});
@@ -161,7 +160,7 @@ class _homepageState extends State<homepage> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: CupertinoSearchTextField(onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => SearchPage()));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => searchpage()));
               }),
             ),
             AspectRatio(
