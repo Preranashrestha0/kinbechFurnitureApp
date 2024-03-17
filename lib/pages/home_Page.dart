@@ -5,12 +5,11 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:furnitureapp/pages/Cart.dart';
-import 'package:furnitureapp/pages/Notifications.dart';
-import 'package:furnitureapp/pages/search.dart';
+import 'package:kinbech_furnitureapp/pages/SearchPage.dart';
 
-import 'productDetail.dart';
-import 'package:furnitureapp/pages/Wishlist_page.dart';
+import 'Cart_Page.dart';
+import 'Notifications.dart';
+import 'ProductDetails.dart';
 
 class homepage extends StatefulWidget {
   const homepage({super.key});
@@ -162,7 +161,7 @@ class _homepageState extends State<homepage> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: CupertinoSearchTextField(onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => searchpage()));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => SearchPage()));
               }),
             ),
             AspectRatio(
@@ -253,6 +252,48 @@ class _homepageState extends State<homepage> {
 
                   ],
                 ),
+              ),
+            ),
+            Expanded(
+              child: GridView.builder(
+                scrollDirection: Axis.vertical,
+                itemCount: _selectedCategoryProducts.length,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+                itemBuilder: (_, index) {
+                  return GestureDetector(
+                    onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) => ProductDetails()),
+                    ),
+                    child: Card(
+                      elevation: 3,
+                      child: Column(
+                        children: [
+                          Container(
+                            height: size.height / 6,
+                            width: size.width / 2,
+                            child: Center(
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: Image.network(
+                                  "${_selectedCategoryProducts[index]["image"]}",
+                                  fit: BoxFit.fill,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Text("${_selectedCategoryProducts[index]["name"]}", style: TextStyle(color: Colors.black, fontFamily: "Inika"),),
+                          Center(
+                            child: Text(
+                              "\$ ${_selectedCategoryProducts[index]["price"].toString()}",
+                              style: TextStyle(color: Colors.brown, fontSize: 15, fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                },
               ),
             ),
           ],
