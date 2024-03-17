@@ -2,8 +2,8 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:kinbech_furnitureapp/pages/MyProfilePage.dart';
 import 'package:kinbech_furnitureapp/pages/PostPage.dart';
+import 'package:kinbech_furnitureapp/pages/Profile_page.dart';
 import 'package:kinbech_furnitureapp/pages/SearchPage.dart';
 import 'package:kinbech_furnitureapp/pages/WishListPage.dart';
 import 'package:kinbech_furnitureapp/pages/home_Page.dart';
@@ -28,7 +28,7 @@ class OnBoardingPagestate extends State<OnBoardingPage>{
     SearchPage(),
     PostPage(),
     WishlistPage(),
-    MyProfilePage(),
+    Profile_page(),
   ];
 
   void _onItemTapped(int index) {

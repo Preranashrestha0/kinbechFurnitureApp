@@ -2,14 +2,11 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:furnitureapp/components/custom_container_widget.dart';
-import 'package:furnitureapp/components/divider.dart';
-import 'package:furnitureapp/pages/Contact_page.dart';
-import 'package:furnitureapp/pages/Order_history.dart';
-import 'package:furnitureapp/pages/PostHistory.dart';
-import 'package:furnitureapp/pages/Wishlist_page.dart';
-import 'package:furnitureapp/pages/loginpage.dart';
-import 'package:furnitureapp/pages/Editprofile.dart';
+import 'package:kinbech_furnitureapp/pages/EditProfile.dart';
+
+import '../components/custom_container_widget.dart';
+import '../components/divider.dart';
+import 'Login_page.dart';
 
 class Profile_page extends StatefulWidget {
   const Profile_page({super.key});
@@ -79,7 +76,7 @@ class _Profile_pageState extends State<Profile_page> {
                     children: [
                       Image.asset('assets/images/Female_Profile.png', height: 80,),
                       Text(' ${user!.email} !!',style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Color(0xff864942)),overflow: TextOverflow.ellipsis,),
-                      IconButton(onPressed: () { Navigator.push(context, MaterialPageRoute(builder: (context)=> Profile())); },
+                      IconButton(onPressed: () { Navigator.push(context, MaterialPageRoute(builder: (context)=> MyProfile())); },
                           icon: Icon(Icons.edit)),
                     ],
                   ),
@@ -94,10 +91,10 @@ class _Profile_pageState extends State<Profile_page> {
               CustomContainerWidget(
                 onTap: () {
                   // Navigate to another page when tapped
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => OrderHistory()),
-                  );
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(builder: (context) => OrderHistory()),
+                  // );
                 },
                 rowcontent: Row(
                   children: [
@@ -115,10 +112,10 @@ class _Profile_pageState extends State<Profile_page> {
               CustomContainerWidget(
                 onTap: () {
                   // Navigate to another page when tapped
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => PostHistory()),
-                  );
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(builder: (context) => PostHistory()),
+                  // );
                 },
                 rowcontent:  Row(
                   children: [
@@ -151,10 +148,10 @@ class _Profile_pageState extends State<Profile_page> {
               CustomContainerWidget(
                 onTap:  () {
                   // Navigate to another page when tapped
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => ContactUsPage()),
-                  );
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(builder: (context) => ContactUsPage()),
+                  // );
                 },
                 rowcontent:  Row(
                   children: [
